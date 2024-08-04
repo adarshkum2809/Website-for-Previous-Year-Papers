@@ -1,0 +1,48 @@
+{% include "header.html" %}
+<body>
+    
+
+<style>
+    #description1{
+        color: bisque;
+        background-color: black;
+        margin-top: 2px;
+        border-color: brown;
+      
+
+    }
+    #des1{
+        color: beige;
+        background-color: black;
+        margin-top: 2px;
+        border-color: brown;
+    }
+    #front{
+        background-image: ;
+
+    }
+    
+</style>
+
+<body>
+    
+   <marquee behavior="" direction="" onmouseover="stop()" onmouseout="Start()">
+    {% for n in newsdata%}
+    WELCOME TO GUIDER_SPACE &nbsp,&nbsp;
+    
+    <a href="/newsDetail/{{n.news_slug}}"> {{n.news_title}} </a>
+    {% endfor %}
+   </marquee>
+   
+    
+  
+    <div id="Front">
+        <h2>CAPTIVATE YOUR DREAMS WITH US... </h2>
+        <button><a href="target">Click Me</a></button>
+    </div>
+    
+    </div>
+    
+ </body>
+          {% include "footer.html" %}
+

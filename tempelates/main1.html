@@ -1,0 +1,94 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #664caf94;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .search-container button:hover {
+            background-color: #ddd;
+        }#video21{
+            background-color: beige;
+            width: 400px;
+            height: 400px;
+    
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">RelaxTherapy</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pornstar">Pornstar</a></li>
+                <li><a href="#services">Best porn</a></li>
+                <li><a href="#contact">newest</a></li>
+                <li><a href="#upload">newest</a></li>
+            </ul>
+            <br>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+
+
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet
+             consectetur, adipisicing elit. Ea deleniti ab error eveniet sit vero animi quibusdam suscipit autem.
+        </p>
+        <a href="upload_vedios">UPLOAD VEdios</a>
+        <hr>
+    </div>
+    <div id="video21">
+    <ul>
+        {% for video in videos %}
+            <li>
+                <h2>{{ video.title }}</h2>
+                <video width="320" height="240" controls>
+                    <source src="{{ video.video_file.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Uploaded at: {{ video.uploaded_at }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
